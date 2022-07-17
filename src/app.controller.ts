@@ -3,11 +3,11 @@ import { MessagePattern, Payload } from '@nestjs/microservices';
 import { CommunicationType } from './enums/communication-type.enum';
 import { NotificationMessage } from './interfaces/notification.interface';
 import { KAFKA_TOPIC } from './kafka/topic';
-import { MailingService } from './services/mailing/mailing.service';
+import { SendgridService } from './services/sendgrid/sendgrid.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly mailingService: MailingService) { }
+  constructor(private readonly mailingService: SendgridService) { }
 
   @MessagePattern(KAFKA_TOPIC.SEND_NOTIFICATION)
   sendNotification(@Payload() message: NotificationMessage) {
@@ -15,7 +15,7 @@ export class AppController {
 
     switch (communication_type) {
       case CommunicationType.EMAIL:
-        this.mailingService.sendNotification(data);
+        this.mailingService.send(data);
     }
   }
 }
