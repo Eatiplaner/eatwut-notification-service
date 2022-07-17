@@ -2,7 +2,8 @@ import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import * as SendGrid from '@sendgrid/mail';
 import { EmailData } from 'src/interfaces/notification.interface';
-import { generateEmailTemplate } from 'src/templates/email';
+
+import { generateEmailTemplate } from '../../templates/email';
 
 @Injectable()
 export class SendgridService {
