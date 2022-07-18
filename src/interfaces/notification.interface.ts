@@ -3,7 +3,7 @@ import { TemplateEmailKey } from "src/templates/email";
 
 export interface EmailData {
   template_key: TemplateEmailKey;
-  username: string;
+  full_name: string;
   token: string;
   to_email: string;
 }
