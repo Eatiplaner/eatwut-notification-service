@@ -4,6 +4,7 @@ import { TemplateEmailKey } from "src/templates/email";
 export interface EmailData {
   template_key: TemplateEmailKey;
   username: string;
+  token: string;
   to_email: string;
 }
 

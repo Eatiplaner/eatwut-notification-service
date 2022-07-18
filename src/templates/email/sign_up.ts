@@ -1,7 +1,10 @@
-function sign_up_html(username: string) {
+import { EmailData } from "src/interfaces/notification.interface"
+
+function sign_up_html(data: EmailData) {
   return `
       <div>
-        Hello ${username} to Eatiplaner App
+        Hello ${data.username} to Eatiplaner App
+        Your token is ${data.token}
       </div>
   `
 }

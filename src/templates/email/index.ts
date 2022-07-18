@@ -7,7 +7,7 @@ export function generateEmailTemplate({ templateKey, data }: { templateKey: Temp
 
   switch (templateKey) {
     case 'sign_up':
-      return sign_up_html(data.username)
+      return sign_up_html(data)
 
     default:
       return ''
