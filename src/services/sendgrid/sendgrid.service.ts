@@ -21,7 +21,7 @@ export class SendgridService {
     const { template_key, to_email } = data;
 
     const transport = await SendGrid.send({
-      subject: 'Sign up Verification',
+      subject: 'Confirm your email address on Eatiplaner',
       from: this.configService.get<string>('SEND_GRID_FROM_EMAIL'),
       html: generateEmailTemplate({ templateKey: template_key, data }),
       to: to_email,
