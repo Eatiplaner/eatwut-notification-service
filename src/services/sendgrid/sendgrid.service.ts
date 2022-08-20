@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
 import * as SendGrid from '@sendgrid/mail';
+import { env } from 'src/configs/env.config';
 import { EmailData } from 'src/interfaces/notification.interface';
 
 import { generateEmailTemplate } from '../../templates/email';
@@ -9,8 +9,8 @@ import { generateEmailTemplate } from '../../templates/email';
 export class SendgridService {
   private readonly logger = new Logger(SendgridService.name);
 
-  constructor(private readonly configService: ConfigService) {
-    SendGrid.setApiKey(this.configService.get<string>('SEND_GRID_KEY'));
+  constructor() {
+    SendGrid.setApiKey(env.SEND_GRID.API_KEY);
   }
 
   async send(data: EmailData) {
@@ -22,7 +22,7 @@ export class SendgridService {
 
     const transport = await SendGrid.send({
       subject: 'Confirm your email address on Eatiplaner',
-      from: this.configService.get<string>('SEND_GRID_FROM_EMAIL'),
+      from: env.SEND_GRID.FROM_EMAIL,
       html: generateEmailTemplate({ templateKey: template_key, data }),
       to: to_email,
     });

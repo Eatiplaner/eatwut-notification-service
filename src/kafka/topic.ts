@@ -1,3 +1,3 @@
 export const KAFKA_TOPIC = {
-  SEND_NOTIFICATION: 'send_notification'
-}
+  SEND_NOTIFICATION: 'send_notification',
+};

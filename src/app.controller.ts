@@ -7,7 +7,7 @@ import { SendgridService } from './services/sendgrid/sendgrid.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly mailingService: SendgridService) { }
+  constructor(private readonly mailingService: SendgridService) {}
 
   @MessagePattern(KAFKA_TOPIC.SEND_NOTIFICATION)
   sendNotification(@Payload() message: NotificationMessage) {
