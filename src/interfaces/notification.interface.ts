@@ -1,5 +1,5 @@
-import { CommunicationType } from "src/enums/communication-type.enum";
-import { TemplateEmailKey } from "src/templates/email";
+import { CommunicationType } from 'src/enums/communication-type.enum';
+import { TemplateEmailKey } from 'src/templates/email';
 
 export interface EmailData {
   template_key: TemplateEmailKey;
