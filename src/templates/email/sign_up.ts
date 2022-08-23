@@ -19,14 +19,27 @@ function sign_up_html(data: EmailData) {
           rel="stylesheet"
         />
         <style>
+          section {
+            display: table;
+            width: 100%;
+          }
+
+          section > * {
+            display: table-row;
+          }
+
+          section .col {
+            display: table-cell;
+          }
+
           body {
             font-family: "Montserrat";
             font-weight: 500;
             font-style: normal;
             background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: absolute;
+            left: 35%;
+            top: 15%;
           }
 
           .container {
@@ -43,9 +56,6 @@ function sign_up_html(data: EmailData) {
 
           .brand-container {
             margin-bottom: 22px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
           }
 
           .logo {
@@ -53,7 +63,6 @@ function sign_up_html(data: EmailData) {
             height: 48px;
             background: #d9d9d9;
             border-radius: 50%;
-            margin-right: 10px;
           }
 
           .brand-name {
@@ -112,19 +121,14 @@ function sign_up_html(data: EmailData) {
           }
 
           .footer-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             margin-top: 22px;
+            text-align: center;
           }
 
           .footer-hyperlink {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
             margin-top: 10px;
+            padding-left: 150px;
+            padding-right: 150px;
           }
 
           .hyperlink-text {
@@ -146,8 +150,14 @@ function sign_up_html(data: EmailData) {
       <body>
         <div class="container">
           <div class="brand-container">
-            <div class="logo"></div>
-            <span class="brand-name">Eatiplaner</span>
+            <section>
+              <div>
+                <div class="col logo"></div>
+                <div style="margin-left: 7px; margin-top: 7px">
+                  <span class="col brand-name">Eatiplaner</span>
+                </div>
+              </div>
+            </section>
           </div>
           <span class="title">Confirm your email on Eatiplaner</span>
 
@@ -176,15 +186,31 @@ function sign_up_html(data: EmailData) {
           <div class="separator"></div>
 
           <div class="footer-container">
-            <div class="logo"></div>
-            <span class="brand-name" style="margin-top: 1px">Eatiplaner</span>
+            <div style="margin-bottom: 10px">
+              <div class="logo" style="margin-left: 265px"></div>
+              <span class="brand-name">Eatiplaner</span>
+            </div>
 
             <div class="footer-hyperlink">
-              <span class="hyperlink-text">Our blogs </span>
-              <div class="hyperlink-separator"></div>
-              <span class="hyperlink-text">Email Preferences</span>
-              <div class="hyperlink-separator"></div>
-              <span class="hyperlink-text">Policies</span>
+              <section>
+                <div>
+                  <div class="col">
+                    <span class="hyperlink-text">Our blogs </span>
+                  </div>
+                  <div class="col">
+                    <div class="hyperlink-separator"></div>
+                  </div>
+                  <div class="col">
+                    <span class="hyperlink-text">Email Preferences</span>
+                  </div>
+                  <div class="col">
+                    <div class="hyperlink-separator"></div>
+                  </div>
+                  <div class="col">
+                    <span class="hyperlink-text">Policies</span>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
