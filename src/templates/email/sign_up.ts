@@ -138,11 +138,12 @@ function sign_up_html(data: EmailData) {
           }
 
           .hyperlink-separator {
-            width: 20px;
-            height: 0px;
+            width: 1px;
+            position: absolute;
+            margin-top: 0px;
+            height: 16px;
 
-            border: 1px solid #a4b2cb;
-            transform: rotate(90deg);
+            background: #a4b2cb;
           }
         </style>
       </head>
