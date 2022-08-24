@@ -8,7 +8,7 @@ export const microserviceConfig: MicroserviceOptions = {
   options: {
     client: {
       clientId:
-        'EATIPLANNER_NOTIFICATION_BACKEND_' +
+        'EATWUT_NOTIFICATION_BACKEND_' +
         randomUUID({ disableEntropyCache: true }),
       brokers: [env.KAFKA.KAFKA_BOOTSTRAP_SERVER],
       retry: {
@@ -16,7 +16,7 @@ export const microserviceConfig: MicroserviceOptions = {
       },
     },
     consumer: {
-      groupId: 'EATIPLANNER_NOTIFICATION_BACKEND_' + KafkaConfig.groupId,
+      groupId: 'EATWUT_NOTIFICATION_BACKEND_' + KafkaConfig.groupId,
       maxWaitTimeInMs: 1000,
     },
   },

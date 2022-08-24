@@ -155,12 +155,12 @@ function sign_up_html(data: EmailData) {
               <div>
                 <div class="col logo"></div>
                 <div style="margin-left: 7px; margin-top: 7px">
-                  <span class="col brand-name">Eatiplaner</span>
+                  <span class="col brand-name">Eatwut</span>
                 </div>
               </div>
             </section>
           </div>
-          <span class="title">Confirm your email on Eatiplaner</span>
+          <span class="title">Confirm your email on Eatwut</span>
 
           <div class="content-container text">
             <div>
@@ -172,7 +172,7 @@ function sign_up_html(data: EmailData) {
 
             <div style="margin-top: 12px">
               <span class="email-text">${data.to_email}</span>
-              <span>and connect it to your Eatiplaner account.</span>
+              <span>and connect it to your Eatwut account.</span>
             </div>
           </div>
 
@@ -189,7 +189,7 @@ function sign_up_html(data: EmailData) {
           <div class="footer-container">
             <div style="margin-bottom: 10px">
               <div class="logo" style="margin-left: 265px"></div>
-              <span class="brand-name">Eatiplaner</span>
+              <span class="brand-name">Eatwut</span>
             </div>
 
             <div class="footer-hyperlink">
